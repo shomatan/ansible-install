@@ -1,6 +1,10 @@
 # Ansible role: ansible-install
 Installs ansible.
 
+## Supported Platforms
++ EL 7
++ Darwin
+
 ## Requirements
 + Repository: epel
 

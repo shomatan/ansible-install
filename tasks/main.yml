@@ -1,3 +1,8 @@
 ---
-- name: Ensure ansible is installed.
+- name: Ensure ansible is installed from yum.
   yum: name=ansible enablerepo=epel
+  when: "ansible_os_family == 'RedHat'"
+
+- name: Ensure ansible is installed from homebrew.
+  homebrew: name=ansible state=present
+  when: "ansible_os_family == 'Darwin'"
