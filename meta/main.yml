@@ -11,9 +11,8 @@ galaxy_info:
         - all
     - name: MacOSX
       versions:
-        - all    
+        - all
   galaxy_tags: []
 
 dependencies:
-  - role: shomatan.epel
-    when: "ansible_os_family == 'RedHat'"
+  - shomatan.epel
