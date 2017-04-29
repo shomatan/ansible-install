@@ -6,3 +6,7 @@
 - name: Ensure ansible is installed from homebrew.
   homebrew: name=ansible state=present
   when: "ansible_os_family == 'Darwin'"
+
+- name: Ensure ansible is installed from apk.
+  apk: name=ansible state=present
+  when: "ansible_os_family == 'Alpine'"
