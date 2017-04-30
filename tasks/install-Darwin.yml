@@ -1,3 +1,5 @@
 ---
 - name: Ensure ansible is installed from homebrew.
-  homebrew: name=ansible state=present
+  homebrew:
+    name: ansible
+    state: present

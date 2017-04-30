@@ -1,6 +1,8 @@
 ---
 - name: Ensure ansible is installed from yum.
-  yum: name=ansible enablerepo=epel
+  yum:
+    name: ansible
+    enablerepo: epel
 
 - name: Purge apk cache.
   command: rm -rf /var/cache/apk/*

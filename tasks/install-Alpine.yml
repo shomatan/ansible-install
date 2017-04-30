@@ -1,6 +1,8 @@
 ---
 - name: Ensure ansible is installed from apk.
-  apk: name=ansible state=present
+  apk:
+    name: ansible
+    state: present
 
 - name: Purge apk cache.
   command: rm -rf /var/cache/apk/*
