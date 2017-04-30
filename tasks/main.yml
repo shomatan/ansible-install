@@ -1,12 +1,5 @@
 ---
-- name: Ensure ansible is installed from yum.
-  yum: name=ansible enablerepo=epel
-  when: "ansible_os_family == 'RedHat'"
+- include: install-{{ ansible_os_family }}.yml
+  static: no
 
-- name: Ensure ansible is installed from homebrew.
-  homebrew: name=ansible state=present
-  when: "ansible_os_family == 'Darwin'"
 
-- name: Ensure ansible is installed from apk.
-  apk: name=ansible state=present
-  when: "ansible_os_family == 'Alpine'"
